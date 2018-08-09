@@ -11,27 +11,14 @@
 |
 */
 
-/*Route::get('/', function()
-{
-  return '<h1>Primeira lógica com Laravel</h1>';
-});
-/*dois parâmetros são passados, o primeiro é o path que será acessado pelo navegador.
-// O segundo é uma função coma resposta a ser enviada.
-//Em poucas palavras,esse código ensina que, quando alguém acessar a URL /, o
-Laravel deve retornar o texto Primeira lógica com Laravel para o navegador.
+Route::get('/produtos', 'ProdutoController@lista');
 
-Route::get('/outra', function()
-{
-  return '<h1>Outra lógica com Laravel</h1>';
+//Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra'); //dessa forma o id pode ser qualquer coisa, inclusive uma palavra.
+
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+');
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/olamundo', function()
-{
-  return '<h1>Olá, Mundo!</h1>';
-});*/
-
-// Se fosse utilizado no /outra o mesmo path da primeira rota, a segunda rota sobreescreveria a primeira.
-//Ou seja,em caso de ambiguidade sempre a última rota é quem será registrada.
-
-Route::get('/produtos', 'ProdutoController@lista');//quando uma requisição for feita para a URL /produtos, o método lista
-//do ProdutoController será executado
+?>

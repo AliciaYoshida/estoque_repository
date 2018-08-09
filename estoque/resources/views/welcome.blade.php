@@ -90,6 +90,12 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+            <div class="content">
+              <div class="links">
+                <a href="https://localhost/estoque/public/produtos">Ir para a página de produtos</a>
+              </div>
+            </div>
         </div>
+
     </body>
 </html>

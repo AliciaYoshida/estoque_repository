@@ -11,18 +11,18 @@
 </head>
 <body>
   <div class="container">
-  <h1>Listagem de Produtos</h1>
-  <table class="table table-striped table-bordered table-hover">
-    <?php foreach($produtos as $p): ?>
-      <tr>
-        <td><?= $p->nome ?></td>
-        <td><?= $p->valor ?></td>
-        <td><?= $p->descricao ?></td>
-        <td><?= $p->quantidade ?></td>
-        <td><a href="https://localhost/estoque/public/produtos/mostra/<?= $p->id ?>"><span class="glyphicon glyphicon-search"></span></a></td>
-      </tr>
-    <?php endforeach ?>
-  </table>
+  <h1>Detalhes do produto: <?php $p->nome ?></h1>
+  <ul>
+    <li>
+      <b>Valor:</b> R$ <?PHP $p->valor ?>
+    </li>
+    <li>
+      <b>Descrição:</b><?= $p->descricao ?>
+    </li>
+    <li>
+      <b>Quantidade em estoque:</b><?= $p->quantidade ?>
+    </li>
+  </ul>
   </div>
 </body>
 </html>
