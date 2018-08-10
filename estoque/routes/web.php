@@ -15,7 +15,7 @@ Route::get('/produtos', 'ProdutoController@lista');
 
 //Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra'); //dessa forma o id pode ser qualquer coisa, inclusive uma palavra.
 
-Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+');
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+'); //{id} da rota sempre será um número.
 
 Route::get('/', function () {
     return view('welcome');
